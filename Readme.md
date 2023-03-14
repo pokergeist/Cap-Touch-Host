@@ -14,11 +14,11 @@ The default LED drive mode is open-drain such that when a switch is triggered, a
 
 The Cap Sensor inputs (CS1-8) and LED outputs (LED1-8) are not routed through the host board. Outputs can be wired directly from the sensor board when needed - otherwise, switch status can be read from the status registers via I2C.
 
-<img src="assets\sensor-mfg-top.png" style="zoom:50%;" /> <img src="assets\sensor-mfg-bot.png" alt="bottom" style="zoom:50%;" />
+<img src="assets/sensor-mfg-top.png" alt="sensor top" style="zoom:50%;" /> <img src="assets/sensor-mfg-bot.png" alt="sensor bottom" style="zoom:50%;" />
 
 ### Schematic
 
-![schematic](assets\schematic-sensor.png)
+![schematic](assets/schematic-sensor.png)
 
 ### Parts List
 
@@ -37,11 +37,11 @@ Each of the RESET lines is pulled high and controlled by the MCU so that the MCU
 
 Each of the sensor module's ADDR_COMM pins are set to a different I2C address. U3 (module #1) uses the default address of 0x28. Address 0x29 (program resistor = 150kΩ) is available so that an unmodified Adafruit CAP1188 module can be attached via the QT Py MCU's Qwiic/STEMMA QT port. I2C addresses are printed on the PC board and schematic.
 
-![board top](assets\host-top.png)
+![board top](assets/host-top.png)
 
 ### Host Board Schematic
 
-![schematic](assets\schematic-host.png)
+![schematic](assets/schematic-host.png)
 
 ### Parts List
 
