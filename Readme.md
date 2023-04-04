@@ -45,27 +45,36 @@ Each of the sensor module's ADDR_COMM pins are set to a different I2C address. U
 
 ### Parts List
 
-| Component |         Description         | Quan.  |                         Part Number                          | Notes                       |
-| :-------: | :-------------------------: | :----: | :----------------------------------------------------------: | --------------------------- |
-|    U1     |      QT PY SAMD21 MCU       |   1    |   Adafruit [#4600](https://www.digikey.com/short/b2fc2jh4)   | Microcontroller             |
-|    U2     | IC EEPROM 32KBIT I2C 8-SOIC |   1    | ON Semi [CAT24C32WI-GT3](https://www.digikey.com/short/5h0p7b04) | EEPROM memory for config.   |
-|    RA1    |       Resistor Array        |   1    |                                                              | RESET line pull-ups.        |
-|  R1, R2   |     3.3kΩ Resistor 1206     |   2    |                                                              | I2C pull-ups.               |
-|    R4     |     120kΩ Resistor 1206     | 0 or 1 |                                                              | Sets I2C address of module. |
-|    R5     |     100kΩ Resistor 1206     | 0 or 1 |                                                              | Sets I2C address of module. |
-|    R6     |     82kΩ Resistor 1206      | 0 or 1 |                                                              | Sets I2C address of module. |
+| Component |          Description          | Quan.  |                         Part Number                          | Notes                          |
+| :-------: | :---------------------------: | :----: | :----------------------------------------------------------: | ------------------------------ |
+|    U1     |       QT PY SAMD21 MCU        |   1    |   Adafruit [#4600](https://www.digikey.com/short/b2fc2jh4)   | Microcontroller                |
+|    U2     |  IC EEPROM 32KBIT I2C 8-SOIC  |   1    | ON Semi [CAT24C32WI-GT3](https://www.digikey.com/short/5h0p7b04) | EEPROM memory for config.      |
+|    RA1    | RES ARRAY 4 RES 6.8K OHM 1206 |  1 *   | Bourns [CAT16-682J4LF](https://www.digikey.com/short/hrmr0547) | RESET pull-ups.                |
+|  R1, R2   |    RES 3.3kΩ 5% 1/4W 1206     |   2    | Stackpole [RMCF1206JT3K30](https://www.digikey.com/short/57h2z201) | I2C pull-ups.                  |
+|    R4     |    RES 120kΩ 1% 1/4W 1206     | 0 or 1 | Stackpole [RMCF1206FT120K](https://www.digikey.com/short/3tnptfrc) | Sets I2C address of module O4. |
+|    R5     |    RES 100kΩ 1% 1/4W 1206     | 0 or 1 | Stackpole [RMCF1206FT100K](https://www.digikey.com/short/2pfhhrhr) | Sets I2C address of module U5. |
+|    R6     |     RES 82kΩ 1% 1/4W 1206     | 0 or 1 | Stackpole [RMCF1206FT82K0](https://www.digikey.com/short/r0n5dq3d) | Sets I2C address of module U6. |
 
-Note: There is no resistor R3 since the address programming resistor was removed to allow use with an Adafruit CAP1188 board.
+**Note**:
+
+* Resistor array RA1  may not be necessary if:
+  *  the GPIO lines default to a weak-pull-up INPUT mode or
+  * you don't care that the **FIXME** ???
+*  there's no pull-down resistor on the RESET pin of this sensor module. (10kΩ pull-down on the Adafruit board.)
+* There is no resistor R3 since the address programming resistor was removed to allow use with an Adafruit CAP1188 board.
+
+## FIXME - Add notes on RESTART, LED Drive, Invert, ...
 
 ## Status
 
 |    Date    | Status                                                       |
 | :--------: | ------------------------------------------------------------ |
+| 2023-04-04 | Posted board files.                                          |
 | 2023-03-13 | Posted to GitHub.                                            |
 | 2023-03-12 | Concept posted to ATMakers FB [group](https://www.facebook.com/groups/ATMakers). |
 
-No one in the target group has an immediate need for theses boards so none are being procured at the moment. Unfortunately that means there's been no testing of a delivered product or software.
+No one in the target group has an immediate need for theses boards so none are being procured at the moment. Hence there's been no testing of a delivered product or software.
 
 ## Todo
 
-* Create board dirs and upload markdown and Eagle files.
+* Create board markdown files.
