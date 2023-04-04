@@ -33,11 +33,11 @@ None of the CAP1188's CS or LED pins are routed through the Host board, but rath
 
 ### Host Board Image
 
-![board top](../assets/host-top.png)
+![board top](../../assets/host-top.png)
 
 ### Host Board Schematic
 
-![schematic](../assets/schematic-host.png)
+![schematic](../../assets/schematic-host.png)
 
 ### Parts List
 

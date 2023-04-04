@@ -30,11 +30,11 @@ The CAP1188's default LED drive mode is open-drain such that when a switch is tr
 
 The Cap Sensor's inputs (CS1-8) and LED outputs (LED1-8) are not routed through the host board. Outputs can be wired directly from the sensor board when needed - otherwise, switch status can be read from the status registers via I2C.
 
-..<img src="../assets/sensor-mfg-top.png" alt="sensor top" style="zoom:50%;" /> <img src="../assets/sensor-mfg-bot.png" alt="sensor bottom" style="zoom:50%;" />
+..<img src="../../assets/sensor-mfg-top.png" alt="sensor top" style="zoom:50%;" /> <img src="../../assets/sensor-mfg-bot.png" alt="sensor bottom" style="zoom:50%;" />
 
 ### Schematic
 
-![schematic](../assets/schematic-sensor.png)
+![schematic](../../assets/schematic-sensor.png)
 
 ### Parts List
 
